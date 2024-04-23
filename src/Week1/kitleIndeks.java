@@ -8,7 +8,6 @@ package Week1;
     Kilo (kg) / Boy(m) * Boy(m)
 */
 import java.util.Scanner;
-import java.util.SimpleTimeZone;
 public class kitleIndeks {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
