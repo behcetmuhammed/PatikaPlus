@@ -1,7 +1,5 @@
 package Week1;
-
 import java.util.Scanner;
-
 //switch-case kullanarak hesap makinesi yapınız.
 public class Calculator {
     public static void main(String[] args) {
