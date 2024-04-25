@@ -1,7 +1,6 @@
 package Week1;
 
 import java.util.*;
-import java.io.*;
 
 /*
     byte > short > int > long
@@ -12,7 +11,7 @@ import java.io.*;
     Bir long, 64 bitlik işaretli bir tamsayıdır.
 */
 
-public class hackerRankChallenge1 {
+public class HackerRankChallenge1 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         System.out.print("Lütfen Sayı Adedini Giriniz: ");

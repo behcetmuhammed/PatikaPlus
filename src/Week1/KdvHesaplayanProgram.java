@@ -12,7 +12,7 @@ tutarı hesaplayan programı yazınız.
 * */
 
 import java.util.Scanner;
-public class kdvHesaplayanProgram {
+public class KdvHesaplayanProgram {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         System.out.print("Lütfen Para Değerini Giriniz: ");

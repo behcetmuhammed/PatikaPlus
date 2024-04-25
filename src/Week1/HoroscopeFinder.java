@@ -19,7 +19,7 @@ import java.util.Scanner;
     ##Ödev
     Aynı örneği switch-case kullanmadan yapınız.
 * */
-public class horoscopeFinder {
+public class HoroscopeFinder {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 

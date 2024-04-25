@@ -1,5 +1,4 @@
 package Week1;
-import java.sql.SQLOutput;
 import java.util.Scanner;
 /*
     Dersler : Matematik, Fizik, Türkçe, Kimya, Müzik
@@ -8,7 +7,7 @@ import java.util.Scanner;
     ##Ödev
     Eğer girilen ders notları 0 veya 100 arasında değil ise ortalamaya katılmasın.
 */
-public class classPassingCode {
+public class ClassPassingCode {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 

@@ -9,7 +9,7 @@ Aynı program içerisinde koşullu ifadeler kullanılarak, eğer kullanıcının
 60'dan büyük ise ekrana "Sınıfı Geçti" , küçük ise "Sınıfta Kaldı" yazsın.
 Not: Ternary Operator ya da Switch Case kullanarak yapılacak.
 */
-public class notOrtalamasi {
+public class NotOrtalamasi {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 

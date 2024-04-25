@@ -8,7 +8,7 @@ package Week1;
     Kilo (kg) / Boy(m) * Boy(m)
 */
 import java.util.Scanner;
-public class kitleIndeks {
+public class KitleIndeks {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 

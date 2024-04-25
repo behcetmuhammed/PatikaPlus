@@ -8,7 +8,7 @@ import java.util.Scanner;
     girdiği şifrenin hatalı girdiği ve unuttuğu şifre ile aynı olmaması gerektiğini kontrol edip , şifreler aynı ise ekrana
     "Şifre oluşturulamadı, lütfen başka şifre giriniz." sorun yoksa "Şifre oluşturuldu" yazan programı yazınız.
 */
-public class userLogin {
+public class UserLogin {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
