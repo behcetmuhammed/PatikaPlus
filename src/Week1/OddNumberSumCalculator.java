@@ -21,7 +21,8 @@ public class OddNumberSumCalculator {
             if(n % 2 == 0 && n % 4 == 0){ // Çift ve 4'ün katları
                 toplam += n;
             }
-        }while (n>0);
+        }while (n % 2 == 0);
+
         System.out.println("Çift ve 4'ün katı olan sayıların toplamı: " + toplam);
 /*
         int n, toplam = 0;
