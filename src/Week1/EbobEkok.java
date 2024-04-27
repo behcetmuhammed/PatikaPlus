@@ -1,10 +1,11 @@
 package Week1;
 import java.util.Scanner;
+
 /*
     ## Ödev
-    Java ile iki sayının EBOB ve EKOK değerlerini "While Döngüsü" kullanarak yazınız. 
+    Java ile iki sayının EBOB ve EKOK değerlerini "While Döngüsü" kullanarak yazınız.
 */
-public class Denemeler {
+public class EbobEkok {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
@@ -14,10 +15,12 @@ public class Denemeler {
         int n2 = input.nextInt();
 
         int ebob = 0;
-        for (int i = 1; i <= n1; i++) {
+        int i = 1;
+        while (i <= n2) {
             if (n1 % i == 0 && n2 % i == 0) {
                 ebob = i;
             }
+            i++;
         }
         System.out.println(n1 + " ve " + n2 + " sayılarının Ebob'u: " + ebob);
 
@@ -26,11 +29,13 @@ public class Denemeler {
 
         //2. Yöntem
         int okek = 0;
-        for (int i = 1; i < n1 * n2; i++) {
-            if (i % n1 == 0 & i % n2 == 0) {
-                okek = i;
+        int k = 1;
+        while (k <= n1*n2){
+            if (k % n1 == 0 && k % n2 == 0) {
+                okek = k;
                 break;
             }
+            k++;
         }
         System.out.println(n1 + " ve " + n2 + " sayılarının Ekok'u: " + okek);
     }
