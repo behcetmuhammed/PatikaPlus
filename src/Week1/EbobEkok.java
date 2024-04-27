@@ -17,7 +17,7 @@ public class EbobEkok {
         int ebob = 0;
         int i = 1;
         while (i <= n2) {
-            if (n1 % i == 0 && n2 % i == 0) {
+            if (n1 % i == 0 && n2 % i == 0) { // Eğer her iki sayıda i sayısına tam bölünüyorsa o ebob dur.
                 ebob = i;
             }
             i++;
@@ -31,9 +31,9 @@ public class EbobEkok {
         int okek = 0;
         int k = 1;
         while (k <= n1*n2){
-            if (k % n1 == 0 && k % n2 == 0) {
+            if (k % n1 == 0 && k % n2 == 0) { // Eğer her iki sayıda i sayısına tam bölünüyorsa o ekokdur dur.
                 okek = k;
-                break;
+                break; // en küçük ortak böleni bulduktan sonra döngüyü sonlandırdık
             }
             k++;
         }
