@@ -10,6 +10,10 @@ N haneli bir sayının basamaklarının n’inci üstlerinin toplamı, sayının
 
 1634=1^4+6^4+3^4+4^4=1+1296+81+256=1634                           => armstrong sayısı
 54748=5^5+4^5+7^5+4^5+8^5=3125+1024+16807+1024+32768=54748        => armstrong sayısı
+
+    ###Ödev
+    Bir sayının basamak sayılarının toplamını hesaplayan program yazınız.
+    Örnek : 1643 = 1 + 6 + 4 + 3 = 14
 */
 
 public class ArmstrongNumbersFinder {
@@ -34,23 +38,25 @@ public class ArmstrongNumbersFinder {
         System.out.println("Basamak Sayısı: " + basamakSayisi);
 
         temp = sayi; // sayıyı geçici değişkene atadık ve böylece sayı tekradan eski değerine döndü
-        int basamakHanesi, sonuc = 0;
+        int basamakHanesi, sonuc = 0, sonucBasamak = 0;
         while (temp != 0) {
-            basamakHanesi = temp %10;
+            basamakHanesi = temp % 10;
+            sonucBasamak += basamakHanesi;
 
             int islem = 1;
-            for(int i = 0; i<basamakSayisi ; i++){ //basamakSayisi = Üs sayımız
+            for (int i = 0; i < basamakSayisi; i++) { //basamakSayisi = Üs sayımız
                 islem *= basamakHanesi;            //basamakHanesi = Taban sayımız
             }
             sonuc = sonuc + islem;
             temp /= 10;
         }
-        System.out.println("Sonuç: " +sonuc);
+        System.out.println("Basamak Sayılarının Toplamı: " + sonucBasamak); //Ödev de bizden istenilen sonuç
+        System.out.println("Sonuç: " + sonuc);
 
-        if(sayi == sonuc){
-            System.out.println(sayi + " sayısı bir Armstrong sayısıdır. Çünkü " + sayi+ " eşittir " + sonuc);
-        }else{
-            System.out.println(sayi + " sayısı bit Armstrong sayısı değildir!. Çünkü " + sayi+ " eşit değidir " + sonuc);
+        if (sayi == sonuc) {
+            System.out.println(sayi + " sayısı bir Armstrong sayısıdır. Çünkü " + sayi + " eşittir " + sonuc);
+        } else {
+            System.out.println(sayi + " sayısı bit Armstrong sayısı değildir!. Çünkü " + sayi + " eşit değidir " + sonuc);
         }
     }
 
