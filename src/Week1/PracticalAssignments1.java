@@ -13,7 +13,7 @@ package Week1;
     Bol şanslar!
 */
 import java.util.Scanner;
-public class Pratik1 {
+public class PracticalAssignments1 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         System.out.print("a sayısını giriniz: ");
