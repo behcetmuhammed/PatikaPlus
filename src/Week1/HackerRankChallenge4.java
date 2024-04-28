@@ -1,7 +1,8 @@
 package Week1;
+
 import java.util.Scanner;
 
-public class Denemeler {
+public class HackerRankChallenge4 {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
