@@ -1,11 +1,6 @@
 package Week1;
-
 import java.util.Scanner;
 
-/*
-
-
- */
 public class FibonacciSeries {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
@@ -27,7 +22,7 @@ public class FibonacciSeries {
             System.out.println(toplam); // fibonnacinin sonraki değerlerini yazdırdık.
             sayi1 = sayi2;
             sayi2 = toplam;
-            if(toplam>limit){
+            if(toplam>limit){ //fibonnaci serisini durdurma limiti
                 break;
             }
         }
