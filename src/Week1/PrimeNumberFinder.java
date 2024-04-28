@@ -1,5 +1,7 @@
 package Week1;
+
 import java.util.Scanner;
+
 /*
     Java ile 1 - 100 arasındaki asal sayıları ekrana yazdıran programı yazınız.
 
@@ -10,15 +12,17 @@ public class PrimeNumberFinder {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
-        System.out.print("Sayı giriniz: ");
-        int sayi = input.nextInt();
-
-        for (int i = 2; i <= sayi; i++) {
-            for (int j = 2; j < i-1; j++) {
-                if(i % j != 0){
-                    System.out.println(i + ": Asal sayı");
+        System.out.println("1 ile 100 arasındaki asal sayılar:");
+        for (int i = 2; i <= 100; i++) {
+            boolean isPrime = true;
+            for (int j = 2; j < i; j++) {
+                if (i % j == 0) {
+                    isPrime = false;
+                    break;
                 }
-
+            }
+            if (isPrime) {
+                System.out.print(i + " ");
             }
         }
 
