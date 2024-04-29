@@ -24,7 +24,9 @@ public class PrimeNumberRecursive {
         if (sayi % i == 0) { // Sayı asal değilse
             return false;
         }
-        return isPrime(sayi, i - 1); // örneğin sayı 7 ise bölen en büyük sayı 3,5 olur. daha sonra 2,5...1,5...0,5 e kadar kontrol ederiz
+        isPrime(sayi, i - 1);
+        System.out.println(i);
+        return true;  // örneğin sayı 7 ise bölen en büyük sayı 3,5 olur. daha sonra 2,5...1,5...0,5 e kadar kontrol ederiz
         //0,5 geldiğimizde ilk if bloğu devreye girer çünkü (0,5<=1) return true olur.
     }
 
