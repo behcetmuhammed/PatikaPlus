@@ -1,7 +1,5 @@
 package Week2.Arrays;
 
-import Week2.HalperArrays;
-
 
 public class Main {
     public static void main(String[] args) {
