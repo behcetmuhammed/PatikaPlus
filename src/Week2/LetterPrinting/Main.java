@@ -42,6 +42,6 @@ public class Main {
                 }
             }
         }
-        LetterPrint.print(arr);
+        LetterPrint.print(arr); //Ekrana yazdırmak için metodu çağırdık
     }
 }
