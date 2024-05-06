@@ -69,8 +69,6 @@ public class ArraySorter {
         //Sıralanmış diziyi erkrana yazdıralım
         //printArr(arr);
 
-
-
         //Eğer elemanları kendimiz gireceksek.. (Ödev de bunu istiyor)
         int[] arr2 = new int[length];
         int counter = 0;
