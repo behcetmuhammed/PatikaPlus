@@ -1,6 +1,6 @@
 package Week2;
 
-public class transposeOfMatrix {
+public class TransposeOfMatrix {
 
     public static void transposeMatris(int[][] arr, int[][] arrT){
         for (int i = 0; i < arr.length; i++) {
