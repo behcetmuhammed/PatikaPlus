@@ -12,7 +12,6 @@ import java.util.Scanner;
 [1, -2, 4, -5, 1]
  */
 
-
 public class HackerRankChallengeW2_3 {
 
     public static int countNegativeSubarrays(int[] arr) {

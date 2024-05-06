@@ -12,10 +12,10 @@ public class PalindromicWord {
         Scanner input = new Scanner(System.in);
         String word = input.next();
 
-        int length = word.length();
-        boolean isPalindrome = true;
+        int length = word.length(); //kelimenin uzunluğunu aldık
+        boolean isPalindrome = true; //default olarak "true" değerini verdik
 
-        for (int i = 0; i < length / 2; i++) {
+        for (int i = 0; i < length / 2; i++) { //uzunluk/2: ortaya geldiğimiz zaman döngü sonlanır...
             if (word.charAt(i) != word.charAt(length - i - 1)) {
                 isPalindrome = false;
                 break;
