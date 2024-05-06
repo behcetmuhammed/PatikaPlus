@@ -1,47 +1,40 @@
 package Week2;
-import java.util.Scanner;
-/*
-[-2]
-[-2, 4, -5]
-[-5]
-[1, -2, 4, -5]
-[-2, 4]
-[4, -5]
-[-2, 4, -5, 1]
-[1]
-[1, -2, 4, -5, 1]
- */
 
+import java.util.*;
 
 public class HackerRankChallengeW2_2 {
 
-    public static int countNegativeSubarrays(int[] arr) {
-        int count = 0;
-        int n = arr.length;
+    public static boolean canWin(int leap, int[] game) {
+        return canWinHelper(leap, game, 0);
+    }
 
-        for (int start = 0; start < n; start++) {
-            for (int end = start; end < n; end++) {
-                int sum = 0;
-                for (int i = start; i <= end; i++) {
-                    sum += arr[i];
-                }
-                if (sum < 0) {
-                    count++;
-                }
-            }
+    private static boolean canWinHelper(int leap, int[] game, int position) {
+        if (position < 0 || game[position] == 1) {
+            return false;
         }
-        return count;
+        if (position == game.length - 1 || position + leap >= game.length) {
+            return true;
+        }
+        game[position] = 1;
+        return canWinHelper(leap, game, position + leap) ||
+                canWinHelper(leap, game, position + 1) ||
+                canWinHelper(leap, game, position - 1);
     }
 
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        int n = 5;
+        Scanner scan = new Scanner(System.in);
+        int q = scan.nextInt();
+        while (q-- > 0) {
+            int n = scan.nextInt();
+            int leap = scan.nextInt();
 
-        //int[] arr = {1, -2, 4, -5, 1};
-        int[] arr = {5, -6, 5, -2 , 5};
+            int[] game = new int[n];
+            for (int i = 0; i < n; i++) {
+                game[i] = scan.nextInt();
+            }
 
-        int negativeSubarrays = countNegativeSubarrays(arr);
-        System.out.println(negativeSubarrays);
-
+            System.out.println( (canWin(leap, game)) ? "YES" : "NO" );
+        }
+        scan.close();
     }
 }
