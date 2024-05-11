@@ -1,16 +1,26 @@
 package Week2;
+
 import java.util.Arrays;
+import java.util.Scanner;
 
 public class Denemeler {
-    public static void modifyValue(int a) {
-        a = 20;
-        System.out.println("Inside modifyValue method: " + a);
-    }
 
     public static void main(String[] args) {
-        int x = 10;
+        Scanner input = new Scanner(System.in);
 
-        Denemeler exx = new Denemeler();
-        exx.modifyValue(x);
+        String[][] arr = {{"*", "-", "-", "*", "-"},
+                {"-", "-", "*", "-", "-"},
+                {"-", "-", "*", "-", "-"},
+                {"-", "*", "-", "-", "-"},
+                {"-", "-", "*", "-", "-"}};
+
+
+        for ( String[] row: arr) {
+            for ( String col : row) {
+                System.out.print(col + " ");
+            }
+            System.out.println();
+        }
+
     }
 }

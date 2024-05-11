@@ -1,4 +1,5 @@
 package Week2;
+
 /*
     Şimdi sıra sende! Bir sayı dizisindeki tekrar eden çift sayıları belirten bir program yazarak
     GitHub reposunu bizimle paylaşmalısın. Kolay gelsin.
@@ -17,20 +18,21 @@ public class DuplicateNumberFinder {
 
     //taşıma
     static int counter = 0;
-    public static int transportArr(int[] arr, int[] arrDisk) {
+
+    public static int[] transportArr(int[] arr, int[] arrDisk) {
         for (int i = 0; i < arr.length; i++) {
             for (int j = 0; j < arr.length; j++) {
                 if (i != j && arr[i] == arr[j]) {
                     if (!isFind(arrDisk, arr[i])) {
                         //ödev de istenilen kısım...
-                        if (arr[i]%2==0) {
+                        if (arr[i] % 2 == 0) {
                             arrDisk[counter++] = arr[i];
                         }
                     }
                 }
             }
         }
-        return 1;
+        return arrDisk; //int ler oluşan tek boyutlu bir dizi int[]
     }
 
     //yazdırma
@@ -40,6 +42,8 @@ public class DuplicateNumberFinder {
         }
     }
 
+
+    //Ana metod
     public static void main(String[] args) {
         //int[] arr = new int[10];
         int[] arr = {2, 5, 4, 4, 5, 8, 2, 6, 1, 10}; //tekrarlanan sayılar 2, 4 ve 5
@@ -47,7 +51,15 @@ public class DuplicateNumberFinder {
         int[] arrDisk = new int[arr.length]; //Yeni dizi oluşturduk.. tekrarlanan sayıları buraya yazacağız..
 
         DuplicateNumberFinder.transportArr(arr, arrDisk);
-        DuplicateNumberFinder.printArr(arrDisk);
+        //DuplicateNumberFinder.printArr(arrDisk);
 
+        int[] arrYedek = transportArr(arr, arrDisk);
+        System.out.println();
+
+        for (int i = 0; i < arrYedek.length; i++) {
+            if (arrYedek[i] != 0) {
+                System.out.print(arrYedek[i] + " ");
+            }
+        }
     }
 }

@@ -22,19 +22,25 @@ public class HackerRankChallengeW2_2 {
     }
 
     public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
-        int q = scan.nextInt();
-        while (q-- > 0) {
-            int n = scan.nextInt();
-            int leap = scan.nextInt();
+        Scanner input = new Scanner(System.in);
 
-            int[] game = new int[n];
+        System.out.print("Sorgu (q) sayısı gir: ");
+        int q = input.nextInt();
+
+        while (q > 0) {
+            System.out.print("Dizinin uzunluğunu gir gir: ");
+            int n = input.nextInt();
+
+            System.out.print("Sıçrama (atlama) sayısı gir: ");
+            int leap = input.nextInt();
+
+            int[] game = new int[n]; //n uzunluğunda bir dizi oluşturduk
             for (int i = 0; i < n; i++) {
-                game[i] = scan.nextInt();
+                System.out.print("\nDizinin " +(i+1) + ". elemanına 0 ile 1 arasında bir sayı gir: ");
+                game[i] = input.nextInt();
             }
-
             System.out.println( (canWin(leap, game)) ? "YES" : "NO" );
+            q--;
         }
-        scan.close();
     }
 }

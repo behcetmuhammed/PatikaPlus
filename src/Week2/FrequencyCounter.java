@@ -13,6 +13,7 @@ package Week2;
 public class FrequencyCounter {
 
     public static void ArrFrequencyCounter(int[] arr) {
+        //{10, 20, 20, 10, 10, 20, 5, 20}
 
         int[] frequencies = new int[arr.length];
 
@@ -21,6 +22,7 @@ public class FrequencyCounter {
 
             int tekrarSayisi = 1;
 
+            //{10, 20, 20, 10, 10, 20, 5, 20}
             for (int j = i + 1; j < arr.length; j++) {
                 if (arr[i] == arr[j]) {
                     tekrarSayisi++;
@@ -39,7 +41,7 @@ public class FrequencyCounter {
     ////////////////     ANA METOD    ////////////////
     public static void main(String[] args) {
 
-        int[] arr = {10, 20, 20, 10, 10, 20, 5, 20};
+        int[] arr = {10, 15, 20, 10, 10, 20, 5, 20};
 
         ArrFrequencyCounter(arr);
     }
