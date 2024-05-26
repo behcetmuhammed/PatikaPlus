@@ -4,6 +4,11 @@ import java.util.*;
 
 //Mağaza
 public class Store {
+
+    static {
+        //...
+    }
+
     //Markalar : Samsung, Lenovo, Apple, Huawei, Casper, Asus, , Xiaomi, Monster
     TreeMap<Integer, Brand> brands = new TreeMap<>();
 
